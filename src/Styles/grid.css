@@ -1,0 +1,33 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 15px;
+  width: 100%;
+  padding-left: 0;
+}
+.container .img {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.container img {
+  width: 100%;
+  display: block;
+  transition: all 100ms ease-out;
+}
+.container img:hover {
+  transform: scale(1.04);
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+}
+
+@media screen and (max-width:600px) {
+  .container .img {
+    width: 100%;
+  }
+}
